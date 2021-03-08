@@ -10,7 +10,7 @@ var music_progress_control_bar = document.getElementById('music-progress-control
 player.addEventListener("timeupdate", function() {
     var currentTime = player.currentTime;
     var duration = player.duration;
-    if (!music_progress_control_bar.focus()) {
+    if (! (document.activeElement === music_progress_control_bar)) {
         var width = (currentTime / duration * 100);
         music_progress_control_bar.value = width;
     }
