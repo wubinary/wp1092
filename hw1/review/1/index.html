@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>I-Lun's Music Player</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Monoton&family=Shippori+Mincho+B1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com"> 
+  </head>
+  <body>
+    <h1 class="title">I-Lun's Music Player</h1>
+    <p class="className">Web Programming hw#1</p>
+    <div class="container">
+      <!-- <span class="material-icons md-light md-60">search</span> -->
+      <img src="./ref.png" alt="La La Land" id="songPictures"/>
+      <div class="main">
+        <p id="songName">Another Day of Sun</p>
+        <p id="singer">La La Land Cast</p>
+      </div>
+      <!-- <hr size="4" width="80%" color="white">  -->
+      <div class="lengthSlidecontainer">
+        <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+        <p id="time">0:23 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -3:25</p>
+      </div>
+      <div class="firstRow">
+        <span class="material-icons md-light md-80">fast_rewind</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="material-icons md-light md-80 image-main">play_arrow</span>
+        <span class="material-icons md-light md-80 image-hover">pause</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="material-icons md-light md-80">fast_forward</span>
+      </div>
+      <div class="sound">
+        <div class="soundSlidecontainer">
+          <br>
+          <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+          <span class="material-icons md-light md-20">volume_mute</span>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <span class="material-icons md-light md-20">volume_up</span>
+        </div>        
+      </div>
+      <div class="lastRow">
+        <br>
+        <span class="material-icons md-light md-40">repeat</span>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <span class="material-icons md-light md-40">shuffle</span>
+      </div>
+      
+    </div>
+    <p class="note">Icon is made by <a href="https://material.io/icons/">Material Design</a></p>
+  </body>
+</html> 
