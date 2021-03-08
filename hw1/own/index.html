@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>HW1 Audio Player</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- fontawesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+    <!-- Latest compiled and minified CSS Bootstrap 4.0 -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link href="./assets/style/index.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="alert alert-success">
+        <strong>HW1</strong> Audio Player !
+    </div>
+    <div class="container songinfo">
+        <!-- Image -->
+        <div class="container">
+            <img style="z-index: -1; width:40%;" src="https://doqvf81n9htmm.cloudfront.net/data/alicelee_126/201801/0123/204.jpg" class="img-thumbnail" alt="Cinque Terre">
+            <div class="centered_songinfo">
+                <div class="spinner-grow text-muted"></div>
+                <div class="spinner-grow text-primary"></div>
+                <div class="spinner-grow text-success"></div>
+                <div class="spinner-grow text-info"></div>
+                <div class="spinner-grow text-warning"></div>
+                <div class="spinner-grow text-danger"></div>
+                <div class="spinner-grow text-secondary"></div>
+                <div class="spinner-grow text-dark"></div>
+                <div class="spinner-grow text-light"></div>
+                <p style="color: white;">Good Songs!</p>
+            </div>
+        </div>
+        <!-- Player -->
+        <audio controls id="player">
+            <source src="./assets/audios/xx.ogg" type="audio/ogg">
+            <source src="./assets/audios/xx.mp3" type="audio/mpeg">
+            Your browser does not support the audio tag.
+        </audio>
+        <!-- Progress bar -->
+        <div class="row centered music-progress">
+            <!-- <div class="progress-bar progress-bar-striped progress-bar-animated" id="music-progress-bar" style="width:100%"></div> -->
+            <input class="progress-control-bar" type="range" min="1" max="100" value="100" id="music-progress-control-bar" onchange="music_progress_control_bar.onchange">
+        </div>
+        <!-- Music meta -->
+        <div class="row d-flex justify-content-center music-meta">
+            <div class="col-3">
+                <span class="badge badge-pill badge-primary music-meta-item"><strong>歌取名稱</strong></span>
+                <span class="badge badge-pill badge-primary music-meta-item">歌手</span>
+                <span class="badge badge-pill badge-primary music-meta-item">2021/02</span>
+            </div>
+            <div class="col-2">
+                <button type="button" class="btn btn-light btn-sm ">next:歌曲名稱</button>
+            </div>
+        </div>
+        <!-- Control panel -->
+        <div class="row d-flex justify-content-center control-panel">
+            <div class="col-3 btn-group btn-group-sm">
+                &nbsp; &nbsp;
+                <button type="button" class="btn btn-outline-primary-inverse">_<i class="fas fa-music"></i>_</button>
+                <button type="button" class="btn btn-outline-primary" id="fast_backward_button" onclick="fast_backward_button.onclick"><i class="fas fa-fast-backward"></i></button>
+                <button type="button" class="btn btn-outline-primary" id="backward_button" onclick="backward_button.onclick"><i class="fas fa-backward"></i></button>
+                <button type="button" class="btn btn-outline-primary" id="play_button" onclick="play_button.onclick"><i class="fas fa-play"></i></button>
+                <button type="button" class="btn btn-outline-primary" id="pause_button" onclick="pause_button.onclick"><i class="fas fa-pause"></i></button>
+                <button type="button" class="btn btn-outline-primary" id="forward_button" onclick="forward_button.onclick"><i class="fas fa-forward"></i></button>
+                <button type="button" class="btn btn-outline-primary" id="fast_forward_button" onclick="fast_forward_button.onclick"><i class="fas fa-fast-forward"></i></button>
+            </div>
+            <div class="col-2 btn-group btn-group-sm volume">
+                <button type="button" class="btn btn-outline-primary volume-icon" id="vol">
+                    <i class="fas fa-volume-up" id="with_vol"></i>
+                    <i class="fas fa-volume-mute" id="without_vol" style="display: none;"></i>
+                </button>
+                <input class="volume-bar" type="range" min="1" max="100" value="50" id="volume" onchange="volume_slider.oninput">
+                <!-- <h6 id="volume_show" style="color: gray;"></h6> -->
+                <!-- </div>
+            <div class="col-1"></div> -->
+            </div>
+        </div>
+</body>
+<script src="./assets/script/index.js" type="text/javascript"></script>
+
+</html>
