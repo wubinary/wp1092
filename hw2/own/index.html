@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Viewer</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+</head>
+
+<body>
+    <!-- Try to implement an HTML that looks like the reference example:
+        ./images/screenshot.png  -->
+    <!-- Please use the class names and IDs as defined in styles.css
+         so that the outlook can be the same as the reference. -->
+    <div class="image-viewer__container">
+        <div class="image-viewer__title" id="img_title">Title</div>
+        <div class="image-viewer__main">
+            <div class="image-viewer__button"><img src="./images/back.png" onclick="previous.onclick" id="previous"></div>
+            <div class="image-viewer__display">
+                <img src="http://images.1111.com.tw/discussPic/36/50058936_146913386.336901.jpg" id="display">
+                <div class="image-viewer__display-source-wrapper"><span><a href="" target="_blank" id="display_source">[source link]</a></span></div>
+            </div>
+            <div class="image-viewer__button"><img src="./images/next.png" onclick="next.onclick" id="next"></div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

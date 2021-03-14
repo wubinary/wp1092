@@ -3,3 +3,6 @@
 ## HW1 Audio Player
 https://wubinary.github.io/wp1092/hw1/own/
 
+## HW2 Image Viewer
+https://wubinary.github.io/wp1092/hw2/own/
+
