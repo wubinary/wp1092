@@ -68,6 +68,7 @@ next.onclick = function(){
 
 // initial
 img_title.innerHTML = image_arr[current_idx].title;
-display.src = image_arr[current_idx].url;
 display_source.href = image_arr[current_idx].url;
+display.src = './images/loading.gif';
+setTimeout(function(){display.src = image_arr[current_idx].url;}, 1000)
 previous.onclick();
