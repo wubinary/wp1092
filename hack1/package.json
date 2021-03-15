@@ -1,0 +1,14 @@
+{
+  "name": "109-2-web-hackathon01-boilerplate",
+  "version": "1.0.0",
+  "description": "A simple YouTube-like frontend with HTML, CSS and JavaScript.",
+  "main": "main.js",
+  "scripts": {
+    "test": "npx cypress run --spec cypress/integration/*.spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^6.6.0"
+  }
+}
