@@ -7,4 +7,3 @@ ReactDOM.render(
     document.getElementById("root")
 );
 
-var todoList = [];
