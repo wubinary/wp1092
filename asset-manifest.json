@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.js": "/wp1092/static/js/main.27b46fda.chunk.js",
-    "main.js.map": "/wp1092/static/js/main.27b46fda.chunk.js.map",
-    "runtime-main.js": "/wp1092/static/js/runtime-main.0c690496.js",
-    "runtime-main.js.map": "/wp1092/static/js/runtime-main.0c690496.js.map",
-    "static/js/2.ff0f2dc6.chunk.js": "/wp1092/static/js/2.ff0f2dc6.chunk.js",
-    "static/js/2.ff0f2dc6.chunk.js.map": "/wp1092/static/js/2.ff0f2dc6.chunk.js.map",
-    "index.html": "/wp1092/index.html",
-    "static/js/2.ff0f2dc6.chunk.js.LICENSE.txt": "/wp1092/static/js/2.ff0f2dc6.chunk.js.LICENSE.txt"
+    "main.js": "/wp1092/hw3/own/static/js/main.27b46fda.chunk.js",
+    "main.js.map": "/wp1092/hw3/own/static/js/main.27b46fda.chunk.js.map",
+    "runtime-main.js": "/wp1092/hw3/own/static/js/runtime-main.95924a0a.js",
+    "runtime-main.js.map": "/wp1092/hw3/own/static/js/runtime-main.95924a0a.js.map",
+    "static/js/2.ff0f2dc6.chunk.js": "/wp1092/hw3/own/static/js/2.ff0f2dc6.chunk.js",
+    "static/js/2.ff0f2dc6.chunk.js.map": "/wp1092/hw3/own/static/js/2.ff0f2dc6.chunk.js.map",
+    "index.html": "/wp1092/hw3/own/index.html",
+    "static/js/2.ff0f2dc6.chunk.js.LICENSE.txt": "/wp1092/hw3/own/static/js/2.ff0f2dc6.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.0c690496.js",
+    "static/js/runtime-main.95924a0a.js",
     "static/js/2.ff0f2dc6.chunk.js",
     "static/js/main.27b46fda.chunk.js"
   ]
