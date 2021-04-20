@@ -1,6 +1,6 @@
 import Row from './Row'
 
-export default function Board2048 ({ board, gameover }) {
+export default function Board2048 ({ board, gameover, initializeBoard, win}) {
 
     let boardClassName = "board ";
     let infoClassName = "info ";
@@ -9,14 +9,14 @@ export default function Board2048 ({ board, gameover }) {
 
     return (
         <>
-        <table className={boardClassName+(gameover?" game-over-board":"")} id="board-full">
+        <table className={boardClassName+(gameover|win?" game-over-board":"")} id="board-full">
             <tbody>
                 {board.map((row_vector, row_idx) => (<Row i={row_idx} vector={row_vector} />))}
             </tbody>
         </table>
-        <div className={infoClassName+(gameover?" game-over-wrapper":"")} id="game-over-info">
-            <span id="game-over-text">{outSentence}</span>
-            <div className="button" id="game-over-button">Try again</div>
+        <div className={infoClassName+(gameover|win?" game-over-wrapper":"")} id="game-over-info">
+            <span id="game-over-text">{win?phdSentence:outSentence}</span>
+            <div className="button" id="game-over-button" onClick={initializeBoard}>Try again</div>
         </div>
         </>
     );

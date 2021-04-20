@@ -146,6 +146,10 @@ class MergeSchool extends Component {
             if (this.checkGameover(nextBoardSetWithRandom.board)) {
                 this.setState({gameover: true});
             }
+
+            if (this.checkWin(nextBoardSetWithRandom.board)) {
+                this.setState({win: true});
+            }
         }
     }
     
@@ -280,6 +284,13 @@ class MergeSchool extends Component {
         // #########################
         // # 10 Implement yourself
         // #########################
+        for (var i=0; i<board.length; i++) {
+            for (var j=0; j<board[i].length; j++){
+                if ( board[i][j]===65536) {
+                    return true;
+                }
+            }
+        }
         return false;
     };
 
@@ -337,7 +348,11 @@ class MergeSchool extends Component {
                         qs_ranking={this.state.qs_ranking} 
                         best_qs_ranking={this.state.best_qs_ranking} 
                         initializeBoard={this.initializeBoard} />
-                <Board2048 className="wrapper" board={this.state.board} gameover={this.state.gameover}/>
+                <Board2048 className="wrapper" 
+                           board={this.state.board} 
+                           gameover={this.state.gameover} 
+                           initializeBoard={this.initializeBoard} 
+                           win={this.state.win} />
                 <div className="btn-groups">
                     <div className="btn-useful" id="badend-btn" onClick={this.setBadEnd}>BadEnd</div>
                     <div className="btn-useful" id="goodend-btn" onClick={this.setGoodEnd}>GoodEnd</div>
