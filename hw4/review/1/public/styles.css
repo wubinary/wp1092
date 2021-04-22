@@ -1,0 +1,71 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 20px;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+    Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 90%;
+  color: #333;
+  justify-content: center;
+}
+
+.mainContainer {
+  display: flex;
+  margin: auto;
+}
+
+.myTable {
+  width: 1200px;
+  height: 600px;
+  overflow-y: scroll;
+  overflow-x: scroll;
+}
+
+.myRow {
+  width: 2160px;
+}
+
+.customCell {
+  width: 80px;
+  padding: 4px;
+  margin: 0;
+  height: 25px;
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  color: black;
+  border: 1px solid #cacaca;
+  text-align: left;
+  vertical-align: top;
+  font-size: 14px;
+  line-height: 15px;
+  overflow: hidden;
+  font-family: Calibri;
+}
+
+#leftButton {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  float: left;
+  top: 25px;
+}
+
+#topButton {
+  display: flex;
+  position: relative;
+  left: 105px;
+}
+
+#test {
+  color: #8b7f7f;
+}
