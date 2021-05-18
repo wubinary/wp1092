@@ -21,24 +21,32 @@ const tidyUpData = (data, result) => {
   //   ]
   // }
   // coding here ...
-  Station.find(async (error, data) => {
-    if (error) {
-        return next(error);
-    } else {
-        await res.json(data);
-        console.log(data);
-
-        result = {};
-        for (i=0; i<Object.keys(data).length; i++) {
-          var k = Object.keys(data)[i]; 
-          result[k] = data[k].sort(function(a, b){
-            var a_num = parseInt(a['station_id'].substring(1, a.length()));
-            var b_num = parseInt(b['station_id'].substring(1, b.length()));
-            return -(a_num - b_num);
-          })
-        }
-        return result
+  var query = Station.find();
+  query.select().exec((err, stations) => {
+    // console.log(stations);
+    var types = stations.map(s => s['station_type']);
+    console.log(types);
+    var lines = new Set();
+    for( var i=0 ; i<types.length; i++) {
+      lines.add(types[i]);
     }
+    console.log(lines);
+
+    var data = {};
+
+    for (i=0; i<lines.length; i++) {
+
+      data[lines[i]] = Array();
+    }
+    // print(data);
+
+    for (var j=0; j<stations.length; j++) {
+
+      data[stations[j]['station_type']].push(stations[j]);
+    }
+    return data;
+      // const keys = Set(stations.map(station => station['station_type']))
+      // console.log(keys);
   });
   
 }
@@ -105,6 +113,7 @@ const GetStations = async (req, res) => {
 
     if (Object.keys(result).length) {
       // return correct response here ...
+      
     }
     else {
       throw new Error('Something Wrong !')

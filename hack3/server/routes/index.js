@@ -17,8 +17,8 @@ function routes(app) {
   // set proper api path and connect the path with wrap(function)
   // coding here ...
 
-  app.use( '/api/getStations', wrap(async (req, res, next) => { GetStations(req, res); } ));
-  app.use( '/api/calculateDistance', wrap(async (req, res, next) => { CalculateDistance(req, res); } ));    
+  app.get( '/api/getStations', wrap( (req, res, next) => { GetStations(req, res); } ));
+  app.get( '/api/calculateDistance', wrap( (req, res, next) => { CalculateDistance(req, res); } ));    
 }
 
 export default routes
