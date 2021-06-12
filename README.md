@@ -14,5 +14,24 @@ express.js
 
 ## HACK2 Express.js
 
-## HW4 Score Card
+## HW4 Fake Spreadsheet 
+> React.js
+
+## HW5 Guess Number Backend
+> express
+
+## HW6 Score Card DB
+> axios
+> express
+> mongoose
+> mongodb
+
+## HW7 Chat Room
+> websocket
+> multi-client
+> mongoose
+> mongodb
+
+![](https://i.imgur.com/wTuhODA.png)
+
 
