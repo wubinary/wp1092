@@ -1,0 +1,36 @@
+.Uploader {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-left: 2%;
+    padding-right: 2%;
+}
+
+.Uploader table {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    margin-top: 1vh;
+    overflow-y: scroll;
+}
+
+.Uploader .controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 3vh;
+}
+
+.Uploader input {
+    height: 24px;
+    border-radius: 2px;
+    font-size: 15px;
+}
+
+.Uploader .tag {
+    width: 20vw;
+    padding-left: 2vw;
+    padding-right: 2vw;
+    font-weight: 800;
+}

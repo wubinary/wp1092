@@ -1,0 +1,67 @@
+{
+    "people": [
+        {
+            "ssn": "A199999999",
+            "name": "黃小弟",
+            "severity": 1,
+            "location": {
+                "name": "臺灣大學",
+                "description": "10617臺北市大安區羅斯福路四段1號"
+            }
+        },
+        {
+            "ssn": "A177777777",
+            "name": "張小弟",
+            "severity": 2,
+            "location": {
+                "name": "臺灣大學",
+                "description": "10617臺北市大安區羅斯福路四段1號"
+            }
+        },
+        {
+            "ssn": "O123456789",
+            "name": "劉哥",
+            "severity": 1,
+            "location": {
+                "name": "南勢角站",
+                "description": "23566新北市中和區捷運路6號"
+            }
+        },
+        {
+            "ssn": "A123456789",
+            "name": "王小弟",
+            "severity": 2,
+            "location": {
+                "name": "國立清華大學",
+                "description": "300新竹市東區光復路二段101號"
+            }
+        },
+        {
+            "ssn": "O111111111",
+            "name": "劉胖胖",
+            "severity": 0,
+            "location": {
+                "name": "縣政府[竹北市民]",
+                "description": "302新竹縣竹北市"
+            }
+        },
+        {
+            "ssn": "O122222222",
+            "name": "謝哥哥",
+            "severity": 1,
+            "location": {
+                "name": "家樂福竹北店 Carrefour Chu Pei Store",
+                "description": "302新竹縣竹北市光明六路89號1F"
+            }
+        },
+        {
+            "ssn": "O133333333",
+            "name": "蔡哥",
+            "severity": 0,
+            "location": {
+                "name": "國立臺南第一高級中學",
+                "description": "701臺南市東區民族路一段1號"
+            }
+        }
+    ]
+}

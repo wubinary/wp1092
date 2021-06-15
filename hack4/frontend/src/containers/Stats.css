@@ -1,0 +1,21 @@
+.Stats {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 5vh;
+}
+
+table, td, th {
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 12px;
+}
+
+th, td {
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}

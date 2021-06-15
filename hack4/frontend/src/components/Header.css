@@ -1,0 +1,31 @@
+.Header {
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    padding: 3vh 3vw 3vh 3vw;
+    background-color: #563d7c;
+    color: white;
+}
+
+.Header .control {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+}
+
+.Header .control .button {
+    margin-left: 1vw;
+    margin-right: 1vw;
+    font-size: 16px;
+    padding: 4px 12px 4px 12px;
+    color: #ffe484;
+    border: 1px solid #ffe484;
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+.Header .control :hover {
+    background-color: #ffe484;
+    color: black;
+    transition-duration: 200ms;
+}
