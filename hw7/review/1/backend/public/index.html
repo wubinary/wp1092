@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+  </head>
+  <body>
+    <ul id="messages"></ul>
+    <input id="name" placeholder="name" />
+    <input id="to" placeholder="to" />
+    <button onclick="startChat()">chat</button>
+    <br />
+    <input id="input" placeholder="message" />
+    <button onclick="sendMessage()">send</button>
+    <script>
+      const nameDOM = document.getElementById('name');
+      const toDOM = document.getElementById('to');
+      const messagesDOM = document.getElementById('messages');
+      const inputDOM = document.getElementById('input');
+
+      let messages = [];
+
+      const server = new WebSocket('ws://localhost:8080');
+      server.onopen = () => console.log('Server connected.');
+      server.onmessage = (m) => {
+        onEvent(JSON.parse(m.data));
+      };
+      server.sendEvent = (e) => server.send(JSON.stringify(e));
+
+      const startChat = () => {
+        if (!nameDOM.value || !toDOM.value) {
+          throw new Error('Fill in the inputs');
+        }
+
+        server.sendEvent({
+          type: 'CHAT',
+          data: { to: toDOM.value, name: nameDOM.value },
+        });
+      };
+
+      const sendMessage = () => {
+        if (!inputDOM.value || !nameDOM.value || !toDOM.value) {
+          throw new Error('Empty input!');
+        }
+
+        server.sendEvent({
+          type: 'MESSAGE',
+          data: { to: toDOM.value, name: nameDOM.value, body: inputDOM.value },
+        });
+      };
+
+      const renderMessages = () => {
+        resetMessages();
+
+        messages.forEach(({ body, name }) => {
+          const newEle = document.createElement('li');
+          newEle.innerHTML = `${name}: ${body}`;
+          messagesDOM.appendChild(newEle);
+        });
+      };
+
+      const resetMessages = () => {
+        // remove all children
+        messagesDOM.innerHTML = '';
+      };
+
+      const onEvent = (e) => {
+        const { type } = e;
+
+        switch (type) {
+          case 'CHAT': {
+            messages = e.data.messages;
+            break;
+          }
+          case 'MESSAGE': {
+            messages.push(e.data.message);
+            break;
+          }
+        }
+
+        renderMessages();
+      };
+    </script>
+  </body>
+</html>
