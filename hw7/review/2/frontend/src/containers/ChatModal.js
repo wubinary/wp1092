@@ -1,6 +1,5 @@
 import { Modal, Form, Input } from "antd";
 
-
 const ChatModal = ({ visible, onCreate, onCancel }) => {
   const [form] = Form.useForm();
   return (
@@ -14,8 +13,8 @@ const ChatModal = ({ visible, onCreate, onCancel }) => {
           form.resetFields();
           onCreate(values);
         }).catch((e) => { window.alert(e); });
-      }}>
-      <Form form={form} layout="vertical"
+    }}>
+     <Form form={form} layout="vertical" 
         name="form_in_modal">
         <Form.Item
           name="name" label="Name"
@@ -30,5 +29,4 @@ const ChatModal = ({ visible, onCreate, onCancel }) => {
     </Modal>
   );
 };
-
 export default ChatModal;

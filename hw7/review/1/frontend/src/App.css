@@ -1,38 +1,61 @@
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  width: 500px;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.App-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-title h1 {
+  margin: 0;
+  margin-right: 20px;
+  font-size: 3em;
+}
+
+.App-messages {
+  width: 100%;
+  height: 300px;
+  background: #eeeeee52;
+  border-radius: 10px;
+  margin: 20px;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.message-box {
+  height: 210px;
+  overflow: auto;
+}
+
+.message-line {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.my-message {
+  justify-content: flex-end;
+  margin-left: 10%;
+}
+
+.friend-message {
+  justify-content: flex-start;
+  margin-right: 10%;
+}
+
+.message-content {
+  background-color: rgb(238, 238, 238);
+  color: rgb(137, 137, 137);
+  margin: 0px 5px;
+  padding: 2px 5px;
+  border-radius: 5px;
+  word-break: break-all;
 }

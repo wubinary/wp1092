@@ -4,9 +4,7 @@ import { UserOutlined } from "@ant-design/icons";
 
 const SignIn = ({ me, setMe, setSignedIn, displayStatus }) => (
   <>
-    <div className="App-title">
-      <h1>My Chat Room</h1>
-    </div>
+    <div className="App-title"><h1>My Chat Room</h1></div>
     <Input.Search
       prefix={<UserOutlined />}
       value={me}
@@ -15,15 +13,17 @@ const SignIn = ({ me, setMe, setSignedIn, displayStatus }) => (
       placeholder="Enter your name"
       size="large"
       style={{ width: 300, margin: 50 }}
-      onSearch={(name) => {
-        if (!name)
-          displayStatus({
-            type: "error",
-            msg: "Missing user name",
-          });
-        else setSignedIn(true);
-      }}
+      onSearch={(name) => { 
+        if(!name)
+            displayStatus({
+                type: 'error',
+                msg: 'Missing username'
+            })
+        else
+            setSignedIn(true); 
+        }}
     ></Input.Search>
   </>
 );
+
 export default SignIn;

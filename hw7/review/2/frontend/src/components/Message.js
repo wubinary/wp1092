@@ -1,35 +1,21 @@
-import styled, { css } from 'styled-components'
-
-const MessageDiv = styled.div`
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-
-  ${({ samePerson }) => {
-    if (samePerson) {
-      return css`     
-        flex-direction: row-reverse;
-        `
+const Message = ({me, mes})=>{
+    const { sender, body } = mes
+    const myMessage = (me===sender)
+    if(myMessage){
+        return (
+            <p className="message_right">
+                <span className="text_body">{body}</span>
+                <span>{sender}</span>
+            </p>
+        )
+    }else{
+        return (
+            <p className="message_left">
+                <span>{sender}</span>
+                <span className="text_body">{body}</span>
+            </p>
+        )
     }
-    else
-      return css`
-        flex-direction: row;
-      `
-  }}
-`
-
-const MessageText = styled.p`
-  background-color: #e0e0e0;
-  border-radius: 20%;
-  padding: 3px;
-`
-
-export default function Message({ me, name, message }) {
-  return (
-    <MessageDiv samePerson={me === name}>
-      <p>{name}</p>
-      <p>&ensp;</p>
-      <MessageText>{message}</MessageText>
-    </MessageDiv>
-  )
 }
+
+export default Message

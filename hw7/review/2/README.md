@@ -1,2 +1,1 @@
-# Chatbot
-Finish all the basic and advanced requirements. 
+基礎功能皆有完成

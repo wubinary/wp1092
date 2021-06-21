@@ -1,10 +1,13 @@
 {
-  "name": "chatroom_test",
+  "name": "own",
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "cd frontend && yarn start",
-    "server": "cd backend && yarn dev"
+    "server": "cd backend && yarn server"
+  },
+  "dependencies": {
+    "dotenv-defaults": "^2.0.1"
   }
 }

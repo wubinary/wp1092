@@ -1,47 +1,19 @@
 import { useState } from "react";
-import { message as AntMessage } from "antd";
-import axios from "../axios";
+const client = new WebSocket('ws://localhost:8080')
+
+const useChat = ()=>{
+    const [messages, sstMessages] = useState('')
+    const [status, setStatus] = useState('')
 
 
-const useChat = () => {
-  const client = new WebSocket('ws://localhost:4000')
-  const [chat, setChat] = useState(null)
+    const sendData = async (data) => {// { sender:me, body:msg }
+        await client.send(JSON.stringify(data));
+    };
+    
+    const sendMessage = (payload) => {
+        sendData(["MESSAGE", payload]);
+    };    
+    return {status, messages, sendMessage}
+}
 
-  client.onmessage = (byteString) => {
-    const res = byteString.data;
-    setChat(JSON.parse(res));
-  }
-
-  const sendData = async (data) => {
-    try {
-      await client.send(JSON.stringify(data))
-    }
-    catch (err) {
-      AntMessage.error(err)
-    }
-  };
-
-  const sendMessage = (user, friend, message) => {
-    sendData({
-      type: "MESSAGE",
-      data: {
-        name: user,
-        to: friend,
-        body: message
-      }
-    });
-  };
-
-  const startChat = (user, friend) => {
-    sendData({
-      type: "CHAT",
-      data: {
-        name: user,
-        to: friend
-      },
-    });
-  };
-
-  return { chat, sendMessage, startChat };
-};
 export default useChat;

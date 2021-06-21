@@ -22,7 +22,7 @@
 
       let messages = [];
 
-      const server = new WebSocket('ws://localhost:4000');
+      const server = new WebSocket('ws://localhost:8080');
       server.onopen = () => console.log('Server connected.');
       server.onmessage = (m) => {
         onEvent(JSON.parse(m.data));
@@ -34,10 +34,10 @@
           throw new Error('Fill in the inputs');
         }
 
-        server.sendEvent({
-          type: 'CHAT',
-          data: { to: toDOM.value, name: nameDOM.value },
-        });
+        server.sendEvent([
+          'CHAT',
+          { name:nameDOM.value , to:toDOM.value },
+        ]);
       };
 
       const sendMessage = () => {
@@ -45,18 +45,18 @@
           throw new Error('Empty input!');
         }
 
-        server.sendEvent({
-          type: 'MESSAGE',
-          data: { to: toDOM.value, name: nameDOM.value, body: inputDOM.value },
-        });
+        server.sendEvent([
+          'MESSAGE',
+          { key:nameDOM.value+'_'+toDOM.value, body: inputDOM.value },
+        ]);
       };
 
       const renderMessages = () => {
         resetMessages();
 
-        messages.forEach(({ body, name }) => {
+        messages.forEach(({ sender, reciever, body }) => {
           const newEle = document.createElement('li');
-          newEle.innerHTML = `${name}: ${body}`;
+          newEle.innerHTML = `${sender}: ${body}`;
           messagesDOM.appendChild(newEle);
         });
       };
@@ -67,6 +67,7 @@
       };
 
       const onEvent = (e) => {
+        console.log(e)
         const { type } = e;
 
         switch (type) {
