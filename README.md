@@ -1,37 +1,33 @@
 # wp1092
 
-## HW1 Audio Player
+## Practice1 : Audio Player
+Implement: HTML, CSS, JavaScript
 https://wubinary.github.io/wp1092/hw1/own/
 
-## HW2 Image Viewer
+## Practice2 : Image Viewer
+Implement: HTML, CSS, JavaScript
 https://wubinary.github.io/wp1092/hw2/own/
 
-## HACK1 Youtube
+## Hack1 : Youtube
 https://wubinary.github.io/wp1092/hack1/
 
-## HW3 Guess Number
-express.js 
+## Practice3 : TODO List
+Implement: React
 
-## HACK2 Express.js
+## Hack2 : Express.js
 
-## HW4 Fake Spreadsheet 
-> React.js
+## Practice4 : Fake Spreadsheet 
+Implement: React
 
-## HW5 Guess Number Backend
-> express
+## Practice5 : Guess Number Backend
+Implement: React, Express, Axios
 
-## HW6 Score Card DB
-> axios
-> express
-> mongoose
-> mongodb
+## Practice6 : Score Card DB
+Implement: React, Express, MongoDB
 
-## HW7 Chat Room
-> websocket
-> multi-client
-> mongoose
-> mongodb
+## Practice7 : Chat Room
+Implement: React, Express, WebSocket, MongoDB
 
-![](https://i.imgur.com/wTuhODA.png)
-
+## Practice 8 : Chat Room (GraphQL)
+Implement: React, GraphQL, MongoDB
 
